@@ -1,7 +1,57 @@
 @import "~bootstrap/scss/bootstrap.scss";
+body{
+    background: black;
+}
+.hr-top, .hr-bottom{
+    border-top: .05rem solid #1ebba3;
+    width: 1050px;
+}
 
-.card {
-    border: solid 1px black;
-    width: 18rem;
-    margin-top: 10px;
+.pText{
+    color:lightgray;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/****************************** NavBar Component *********************/
+.navbar{
+    background:black;
+    margin-bottom: 200px;
+
+
+}
+.logo{
+    width: 180px;
+    height: 180px;
+}
+
+.social-cont{
+    color: white;
+    font-size: 20px;
+    //margin-left: 10px;
+}
+.facebook, .instagram, .twitter{
+    margin-left:10px;
+}
+
+.input{
+    height: 30px;
+}
+/****************************** Card Component *********************/
+.card-planets, .card-characters{
+    background: black;
+}
+.title{
+    color:white;
+}
+/****************************** Footer Component *********************/
+.page-footer{
+
+    height: 100px;
+    margin-top:300px;
+}
+.footer-cr {
+    color:white;
 }

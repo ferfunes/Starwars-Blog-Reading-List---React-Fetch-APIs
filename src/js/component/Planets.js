@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Card extends React.Component {
+export class Planets extends React.Component {
 	constructor() {
 		super();
 
@@ -21,9 +21,14 @@ export class Card extends React.Component {
 	}
 	render() {
 		return (
-			<div className="card col-lg-3 col-md-6 mb-4 ">
+			<div className="card-planets card col-lg-3 col-md-6  ">
 				<div className="card-body">
-					<h5 className="card-title">Planets</h5>
+					<img
+						src="https://lumiere-a.akamaihd.net/v1/images/databank_alderaan_01_169_4a5264e2.jpeg?region=0%2C0%2C1560%2C878&width=768"
+						className="card-img-top"
+						alt="..."
+					/>
+					<h5 className="title card-title">Planets</h5>
 					<h6 className="card-subtitle mb-2 text-muted">
 						Name: {this.state.planet.name}
 					</h6>
