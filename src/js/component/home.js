@@ -1,7 +1,12 @@
 import React from "react";
 import { NavBar } from "./NavBar.js";
-import { Planets } from "./Planets.js";
-import { Characters } from "./Characters.js";
+import { Planets, Planets2, Planets3, Planets4 } from "./Planets.js";
+import {
+	Characters,
+	Characters2,
+	Characters3,
+	Characters4
+} from "./Characters.js";
 import { Footer } from "./Footer.js";
 
 //include images into your bundle
@@ -23,26 +28,28 @@ export class Home extends React.Component {
 					<div className="row">
 						<Planets className="planet0" />
 
-						<Planets className="planet1" />
+						<Planets2 className="planet1" />
 
-						<Planets className="planet2" />
+						<Planets3 className="planet2" />
 
-						<Planets className="planet3" />
+						<Planets4 className="planet3" />
 					</div>
 				</div>
-				<hr className="hr-top" />
-				<p className="pText">People</p>
-				<hr className="hr-bottom" />
+				<div>
+					<hr className="hr-top" />
+					<p className="pText">People</p>
+					<hr className="hr-bottom" />
+				</div>
 
 				<div className="container">
 					<div className="row">
 						<Characters className="Character0" />
 
-						<Characters className="Character1" />
+						<Characters2 className="Character1" />
 
-						<Characters className="Character2" />
+						<Characters3 className="Character2" />
 
-						<Characters className="Character3" />
+						<Characters4 className="Character3" />
 					</div>
 				</div>
 				<div className="Footer-cont">
