@@ -1,19 +1,58 @@
 import React from "react";
 import { NavBar } from "./NavBar.js";
-import { Planets, Planets2, Planets3, Planets4 } from "./Planets.js";
-import {
-	Characters,
-	Characters2,
-	Characters3,
-	Characters4
-} from "./Characters.js";
+import { Planets } from "./Planets.js";
+import { Characters } from "./Characters.js";
 import { Footer } from "./Footer.js";
 
 //include images into your bundle
 
 //create your first component
 export class Home extends React.Component {
+	constructor() {
+		super();
+
+		this.state = {
+			character: [],
+			planet: []
+		};
+	}
+
+	componentDidMount() {
+		fetch("https://swapi.co/api/people/")
+			.then(response => response.json())
+			.then(data => {
+				let character = this.state;
+
+				this.setState({ character: data.results });
+				console.log(data.results);
+			});
+
+		fetch("https://swapi.co/api/planets/")
+			.then(response => response.json())
+			.then(data => {
+				let planet = this.state;
+
+				this.setState({ planet: data.results });
+				console.log(data.results);
+			});
+	}
+
 	render() {
+		let newArray = this.state.character.map((item, index) => {
+			return (
+				<Characters
+					key={index}
+					name={item.name}
+					height={item.height}
+					birth_year={item.birth_year}
+				/>
+			);
+		});
+
+		let newArray2 = this.state.planet.map((item, index) => {
+			return <Planets key={index} name={item.name} />;
+		});
+
 		return (
 			<div className="home">
 				<div className="navbar-cont">
@@ -25,15 +64,7 @@ export class Home extends React.Component {
 					<hr className="hr-bottom" />
 				</div>
 				<div className="container">
-					<div className="row">
-						<Planets className="planet0" />
-
-						<Planets2 className="planet1" />
-
-						<Planets3 className="planet2" />
-
-						<Planets4 className="planet3" />
-					</div>
+					<div className="row">{newArray2}</div>
 				</div>
 				<div>
 					<hr className="hr-top" />
@@ -42,15 +73,7 @@ export class Home extends React.Component {
 				</div>
 
 				<div className="container">
-					<div className="row">
-						<Characters className="Character0" />
-
-						<Characters2 className="Character1" />
-
-						<Characters3 className="Character2" />
-
-						<Characters4 className="Character3" />
-					</div>
+					<div className="row">{newArray}</div>
 				</div>
 				<div className="Footer-cont">
 					<Footer />
