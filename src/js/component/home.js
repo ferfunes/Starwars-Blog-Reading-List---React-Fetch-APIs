@@ -50,26 +50,33 @@ export class Home extends React.Component {
 		});
 
 		let newArray2 = this.state.planet.map((item, index) => {
-			return <Planets key={index} name={item.name} />;
+			return (
+				<Planets
+					key={index}
+					name={item.name}
+					terrain={item.terrain}
+					population={item.population}
+				/>
+			);
 		});
 
 		return (
-			<div className="home">
+			<div className="home ">
 				<div className="navbar-cont">
 					<NavBar />
 				</div>
 				<div>
-					<hr className="hr-top" />
+					<hr className="hr-top col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
 					<p className="pText">Planets</p>
-					<hr className="hr-bottom" />
+					<hr className="hr-bottom col-lg-10 col-md-6 col-sm-6 col-xs-6 " />
 				</div>
 				<div className="container">
 					<div className="row">{newArray2}</div>
 				</div>
 				<div>
-					<hr className="hr-top" />
+					<hr className="hr-top col-lg-10 col-md-6 col-sm-6 col-xs-6" />
 					<p className="pText">People</p>
-					<hr className="hr-bottom" />
+					<hr className="hr-bottom col-lg-10 col-md-6 col-sm-6 col-xs-6" />
 				</div>
 
 				<div className="container">

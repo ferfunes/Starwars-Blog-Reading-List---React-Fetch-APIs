@@ -20,15 +20,13 @@ body{
 
 /****************************** NavBar Component *********************/
 .navbar{
-    background:black;
-    margin-bottom: 200px;
-
-
+ background: black;
 }
 .logo{
     width: 180px;
     height: 180px;
 }
+
 
 .social-cont{
     color: white;
@@ -38,10 +36,17 @@ body{
 .facebook, .instagram, .twitter{
     margin-left:10px;
 }
+.facebook:hover, .instagram:hover, .twitter:hover, .btn-text:hover{
+color:#1ebba3;
+}
 
-.input{
+.input, .search-btn{
     height: 30px;
 }
+.btn-text{
+    font-size: 10px;
+}
+
 /****************************** Card Component *********************/
 .card-planets, .card-characters{
     background: black;
